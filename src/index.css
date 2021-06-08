@@ -1,13 +1,257 @@
 body {
-  margin: 0;
+  margin: 15px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+header{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.App{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.Card{
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: 400px;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f8ffff;
+}
+
+.UserInfo{
+  padding: 6px;
+}
+
+.Card h5{
+  font-size: 16px;
+  color: #7f7f7f;
+}
+
+.Avatar{
+  margin-top: 10px;
+  height: 25%;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.modal-background {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.86);
+}
+
+.modal-card {
+  margin: 0 auto;
+  display: block;
+  margin-top: 135px;
+  width: 500px;
+  height: 500px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.InfoAboutUsers h5{
+  padding-top: 9px;
+  margin-top: 20px;
+  color: black;
+}
+
+.Card h5 span{
+  color: black;
+}
+
+.card-button{
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: bisque;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.card-reset{
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #ff9898;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.input{
+  width: 200px;
+  border: 1px solid black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+select{
+  border: 1px solid black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.close-button{
+  border: 1px solid black;
+  background-color: #ff8157;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 137px;
+  left: 262px;
+}
+
+header{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.App{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.Card{
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: 400px;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f8ffff;
+}
+
+.UserInfo{
+  padding: 6px;
+}
+
+.Card h5{
+  font-size: 16px;
+  color: #7f7f7f;
+}
+
+.Avatar{
+  margin-top: 10px;
+  height: 25%;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.modal-background {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.86);
+}
+
+.modal-card {
+  margin: 0 auto;
+  display: block;
+  margin-top: 135px;
+  width: 500px;
+  height: 500px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.InfoAboutUsers h5{
+  padding-top: 9px;
+  margin-top: 20px;
+  color: black;
+}
+
+.Card h5 span{
+  color: black;
+}
+
+.card-button{
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: bisque;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.card-reset{
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #ff9898;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.input{
+  width: 200px;
+  border: 1px solid black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+select{
+  border: 1px solid black;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.close-button{
+  border: 1px solid black;
+  background-color: #ff8157;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 137px;
+  left: 262px;
 }
