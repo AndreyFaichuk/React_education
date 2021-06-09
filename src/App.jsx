@@ -65,9 +65,12 @@ const Card = props => {
 
 function App() {
   const [state, setState] = useState(userData)
+  const [stateInput, setStateInput] = useState('')
+  const [stateSelect, setStateSelect] = useState()
 
   const selectSearch = e => {
     const {value} = e.target
+    setStateSelect(value)
     let result = [...state].sort((a,b) => {
       if(value === 'asc') return a.age - b.age
       if(value === 'desc') return b.age - a.age
@@ -78,11 +81,14 @@ function App() {
 
   const handleSearch = (e) => {
     let {value} = e.target
+    setStateInput(value)
     let result = [...userData].filter(item => item.name.toLowerCase().includes(value.toLowerCase()))
     setState(result)
   }
 
   const resetFilters = () => {
+    setStateInput('')
+    setStateSelect("no")
     setState(userData)
   }
 
@@ -102,9 +108,9 @@ function App() {
   return (
       <>
         <header>
-          <input type="text" placeholder={'Enter name...'} className="input" onChange={handleSearch}/>
-          <select name="select" onChange={selectSearch}>
-            <option defaultValue hidden>Сортировка</option>
+          <input type="text" placeholder={'Enter name...'} value = {stateInput} className="input" onChange={handleSearch}/>
+          <select name="select" value={stateSelect} onChange={selectSearch}>
+            <option defaultValue hidden >Сортировка</option>
             <option value = "asc">Отсортировать по возрастанию</option>
             <option value = "desc">Отсортировать по убыванию</option>
           </select>
