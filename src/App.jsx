@@ -83,14 +83,17 @@ function App() {
     let {value} = e.target
     setStateInput(value)
     let result = [...userData].filter(item => item.name.toLowerCase().includes(value.toLowerCase()))
+    console.log(result)
     setState(result)
   }
 
   const resetFilters = () => {
     setStateInput('')
-    setStateSelect("no")
+    setStateSelect('')
     setState(userData)
   }
+
+  console.log(state)
 
   if(state.length === 0 ){
     return (
