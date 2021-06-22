@@ -1,38 +1,284 @@
-.App {
-  text-align: center;
+#root{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-container{
+    width: 27%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    margin: 70px;
+    border: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-content{
+    display: flex;
+    justify-content: center;
+    height: 375px;
+    width: 90%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.buttons{
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons button{
+    width: 125px;
+    height: 35px;
+    margin: 0 10px 25px 10px;
+    background: none;
+    font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputsStep1{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: -22px -20px 10px 0px;
+}
+
+.inputsStep1 input{
+    height: 25px;
+    width: 90%;
+}
+
+.inputsStep1 div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputsStep1 img{
+    width: 21%;
+    padding: 10px 0 10px 0;
+}
+
+.step-page-finall{
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.wrapper-img{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.wrapper-img img{
+    width: 35%;
+}
+
+.total-info h4{
+    margin: 7px 0 0 0;
+}
+
+.imgUpload{
+    display: flex;
+    justify-content: center;
+}
+
+.chous {
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font: 14px/50px Tahoma;
+    border: 1px solid black;
+
+}
+
+.my {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#avatar{
+    width: 40%;
+    padding: 5px;
+}
+
+.variant{
+    border: 3px solid greenyellow;
+}
+
+.inputsStep1 h5{
+    color: red;
+    margin: 0;
+}
+
+.inputsStep1 span{
+    color: darkgray;
+    font-size: small;
+}
+
+.inputsStep1 h4{
+    margin: 0 0 0 0;
+}
+
+.password{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email .correctEmail {
+    color: greenyellow;
+}
+
+.email .errorEmail {
+    color: red;
+}
+
+.passwords .correctPassword {
+    color: greenyellow;
+    padding: 40px 0 0 0;
+    font-size: large;
+}
+
+.passwords .errorPassword {
+    color: red;
+    padding: 40px 0 0 0;
+    font-size: large;
+}
+
+.dark{
+    background-color: #312b2b;
+}
+
+.dark .form-container{
+    border: 1px solid white;
+}
+
+.dark .step-page h1{
+    color: #e0e0e0;
+}
+
+.dark .inputsStep1 h4{
+    color: #e0e0e0;
+}
+
+.dark .buttons button{
+    background: #ffe7c1;
+}
+
+.dark input{
+    background-color: #ffe7c1;
+}
+
+.dark .chous{
+    border: 1px solid white;
+    color: #e0e0e0;
+}
+
+.dark .step-page-finall h1{
+    color: #e0e0e0;
+}
+
+.dark .total-info h4{
+     color: #e0e0e0;
+ }
+
+.dark .total-info h3{
+    color: #e0e0e0;
+}
+
+.dark .checkbox span{
+    color: #e0e0e0;
+}
+
+.theme-switch{
+    height: 20px;
+}
+
+.step-page-finall h1, h3, h4 {
+    color: black;
+}
+
+.checkbox{
+    display: inline-block;
+    padding: 5px 5px 5px 46px;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox input{
+    position: absolute;
+    opacity: 0;
+    cursor: inherit;
+}
+.checkbox span{
+    display: inline-block;
+    font: normal 12px/18px Arial;
+    padding: 1px 0;
+}
+.checkbox span:before,
+.checkbox span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.checkbox span:before{
+    left: 0;
+    height: 14px;
+    margin-top: -7px;
+    width: 36px;
+    border-radius: 7px;
+    background:  #c9c9c9;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+}
+.checkbox span:after{
+    left: 0;
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
+
+.checkbox input:checked + span:before{
+    background-color: #c9c9c9;
+}
+.checkbox input:checked + span:after{
+    background-color: white;
+    left: 16px;
+}
+
+.checkbox input:focus + span:before{
+    box-shadow: 0 0 0 3px rgba(50,150,255,.2);
+}
+
+.checkbox input:disabled + span{
+    opacity: .35;
+}
+.checkbox input:disabled + span:before{
+    background-color: #c9c9c9;
 }
