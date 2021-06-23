@@ -165,9 +165,6 @@ const Step3 = () => {
     const {state, dispatch} = useContext(Context)
     const [imgUrl, setImgUrl] = useState(state.thirdStep.photoURL)
 
-    useEffect(() =>{
-        return () => dispatch({type: 'T_STEP', payload: {photoURL: imgUrl}})
-    })
 
     const handleChange = (e) => {
         const file = e.target.files[0]
@@ -176,6 +173,10 @@ const Step3 = () => {
         fileReader.onload = () => setImgUrl(fileReader.result)
         fileReader.readAsDataURL(file)
     }
+
+    useEffect(() =>{
+        return () => dispatch({type: 'T_STEP', payload: {photoURL: imgUrl}})
+    }, [imgUrl])
 
     const handleChange2 = (e) => {
         setImgUrl(e.target.src)
